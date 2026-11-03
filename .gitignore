@@ -1,0 +1,13 @@
+__pycache__/
+*.py[cod]
+*.egg-info/
+build/
+dist/
+.venv/
+.pytest_cache/
+
+# Raw dataset files are fetched, never committed (see DATA_NOTES.md).
+# Derived artifacts (results, figures) ARE committed on purpose.
+data/*
+!data/.gitkeep
+*.zip

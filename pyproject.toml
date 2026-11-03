@@ -1,0 +1,33 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "houserules"
+version = "0.1.0"
+description = "HouseRules: a safety benchmark for agents that act in real homes — real recorded routines (CASAS), six hard safety invariants, one headline metric: safe success."
+readme = "README.md"
+license = { text = "MIT" }
+authors = [{ name = "Tejaswini Sirlapu" }]
+requires-python = ">=3.9"
+keywords = ["benchmark", "ai-safety", "smart-home", "llm-agents", "casas", "evaluation"]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Science/Research",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Topic :: Scientific/Engineering :: Artificial Intelligence",
+]
+
+[project.optional-dependencies]
+figures = ["matplotlib>=3.6", "numpy>=1.24"]
+dev = ["pytest>=7"]
+
+[project.scripts]
+houserules = "houserules.cli:main"
+
+[project.urls]
+Homepage = "https://github.com/sirlaputejaswini/house-rules"
+
+[tool.setuptools.packages.find]
+where = ["src"]
